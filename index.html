@@ -439,9 +439,9 @@ position:relative;
 }
 
 .hero-photo img{
-width:100%;
-height:100%;
-object-fit:cover;
+object-fit:contain;
+background:#000;
+}
 
 border-radius:30px;
 
@@ -499,6 +499,121 @@ letter-spacing:2px;
 border:1px solid rgba(255,220,180,.3);
 
 backdrop-filter:blur(10px);
+}
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width:768px){
+
+.hero{
+padding:20px;
+}
+
+.glass{
+padding:25px 20px;
+margin:15px;
+}
+
+.hero h1{
+font-size:2.8rem;
+line-height:1.1;
+}
+
+.hero h2{
+font-size:1.7rem;
+letter-spacing:1px;
+}
+
+.hero p{
+font-size:.95rem;
+line-height:1.8;
+}
+
+.hero-photo{
+width:240px;
+height:320px;
+margin:25px auto;
+}
+
+.hero-photo::after{
+font-size:.75rem;
+padding:8px 18px;
+}
+
+.countdown-box{
+padding:20px 10px;
+}
+
+.countdown{
+gap:10px;
+}
+
+.time-box{
+width:75px;
+height:75px;
+}
+
+.time-box span{
+font-size:1.4rem;
+}
+
+.time-box small{
+font-size:.7rem;
+}
+
+.title{
+font-size:2rem;
+padding:12px 25px;
+}
+
+.gallery{
+padding:60px 20px;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.card img{
+height:280px;
+}
+
+.letter{
+padding:60px 20px;
+}
+
+.letter-box{
+padding:25px;
+font-size:1.15rem;
+line-height:1.8;
+}
+
+.final{
+height:auto;
+padding:60px 20px;
+}
+
+.final div{
+padding:30px 20px;
+}
+
+.final h1{
+font-size:2.3rem;
+}
+
+.final p{
+font-size:1rem;
+}
+
+.balloon{
+width:60px;
+height:80px;
+}
+
+}
+.hero-photo::after{
+content:'❤️ My Favorite Person ❤️';
 }
 </style>
 </head>
