@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Rezlly ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:
+radial-gradient(circle at top left,#6b3d1f 0%,transparent 35%),
+radial-gradient(circle at top right,#9e6a3d 0%,transparent 30%),
+radial-gradient(circle at bottom left,#3d2416 0%,transparent 40%),
+linear-gradient(135deg,#000000,#120b08,#25160d,#000000);
+background-attachment:fixed;
+overflow-x:hidden;
+color:white;
+position:relative;
+}
+
+body::before{
+content:'';
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 30%,rgba(255,200,120,.25),transparent 25%),
+radial-gradient(circle at 80% 20%,rgba(255,180,90,.18),transparent 20%),
+radial-gradient(circle at 50% 80%,rgba(255,220,180,.12),transparent 30%);
+filter:blur(60px);
+animation:glowMove 12s ease-in-out infinite alternate;
+z-index:-2;
+}
+
+body::after{
+content:'';
+position:fixed;
+inset:0;
+background-image:
+linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+background-size:50px 50px;
+z-index:-1;
+opacity:.3;
+}
+
+@keyframes glowMove{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.2);
+}
+}
+
+/* BALLOON */
+
+.balloon{
+position:fixed;
+bottom:-250px;
+width:90px;
+height:120px;
+border-radius:50% 50% 45% 45%;
+
+background:
+radial-gradient(circle at 30% 20%,
+rgba(255,255,255,.95) 0%,
+rgba(255,230,200,.9) 20%,
+#c4834d 70%);
+
+box-shadow:
+0 0 20px rgba(255,210,150,.7),
+0 0 50px rgba(255,180,90,.4),
+inset -10px -10px 20px rgba(0,0,0,.2);
+
+animation:floatUp linear infinite;
+pointer-events:none;
+z-index:0;
+}
+
+.balloon::before{
+content:'';
+position:absolute;
+bottom:-10px;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:14px;
+background:#9c6034;
+clip-path:polygon(50% 100%,0 0,100% 0);
+}
+
+.balloon svg{
+position:absolute;
+top:110px;
+left:50%;
+transform:translateX(-50%);
+overflow:visible;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0) rotate(-5deg);
+}
+25%{
+transform:translateY(-35vh) rotate(5deg);
+}
+50%{
+transform:translateY(-70vh) rotate(-5deg);
+}
+75%{
+transform:translateY(-105vh) rotate(5deg);
+}
+100%{
+transform:translateY(-150vh) rotate(-5deg);
+}
+}
+
+/* HERO */
+
+.hero,
+.gallery,
+.letter,
+.final{
+position:relative;
+z-index:10;
+}
+
+.glass{
+position:relative;
+overflow:hidden;
+
+max-width:900px;
+margin:auto;
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+
+padding:60px;
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 30px rgba(255,180,90,.15),
+0 0 80px rgba(255,180,90,.1),
+0 20px 50px rgba(0,0,0,.5);
+
+text-align:center;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+font-weight:700;
+letter-spacing:2px;
+color:#ffddb5;
+}
+
+.hero h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.8rem;
+font-weight:600;
+color:#ffd8a8;
+letter-spacing:3px;
+
+text-shadow:
+0 0 10px rgba(255,220,180,.5),
+0 0 30px rgba(255,180,90,.3);
+}
+
+.hero p{
+font-size:1.1rem;
+opacity:.9;
+line-height:1.8;
+}
+
+/* PHOTO */
+
+.gallery{
+padding:100px 8%;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:3.5rem;
+font-weight:600;
+letter-spacing:2px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+overflow:hidden;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+transition:.5s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+width:100%;
+height:350px;
+object-fit:cover;
+display:block;
+}
+
+/* LETTER */
+
+.letter{
+padding:100px 10%;
+text-align:center;
+}
+
+.letter-box{
+max-width:900px;
+margin:auto;
+padding:50px;
+border-radius:25px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+line-height:2;
+font-size:1.1rem;
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+font-weight:400;
+}
+
+/* FINAL */
+
+.final{
+height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.final h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+color:#ffddb5;
+}
+
+.final p{
+margin-top:20px;
+font-size:1.3rem;
+}
+
+/* HEART */
+
+.heart{
+position:fixed;
+color:#ff9f9f;
+font-size:20px;
+animation:love 8s linear infinite;
+pointer-events:none;
+}
+
+@keyframes love{
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px) scale(1.5);
+opacity:0;
+}
+}
+
+audio{
+display:none;
+}
+
+.hero,
+.gallery,
+.letter,
+.final{
+position:relative;
+z-index:5;
+}
+
+.title{
+display:inline-block;
+
+padding:15px 40px;
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+
+border-radius:50px;
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 20px rgba(255,180,90,.1);
+
+margin-bottom:50px;
+
+font-family:'Playfair Display',serif;
+font-size:3rem;
+color:#ffddb5;
+}
+
+.final div{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+
+padding:60px;
+
+border-radius:30px;
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 30px rgba(255,180,90,.1),
+0 10px 30px rgba(0,0,0,.4);
+
+max-width:900px;
+width:100%;
+}
+
+body,
+.hero,
+.gallery,
+.letter,
+.final,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+text-align:center;
+}
+
+.hero h1,
+.hero h2,
+.title,
+.final h1{
+text-shadow:
+0 0 10px rgba(255,220,180,.6),
+0 0 20px rgba(255,180,90,.4),
+0 0 40px rgba(255,180,90,.2);
+}
+
+.countdown-box{
+margin:35px auto;
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+border-radius:25px;
+
+padding:30px;
+
+max-width:700px;
+
+box-shadow:
+0 0 30px rgba(255,180,90,.15),
+0 0 80px rgba(255,180,90,.08);
+}
+
+.countdown-box h3{
+margin-bottom:25px;
+color:#ffddb5;
+font-size:1.5rem;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.time-box{
+width:120px;
+height:120px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+
+box-shadow:
+0 0 20px rgba(255,180,90,.15);
+}
+
+.time-box span{
+font-size:2.5rem;
+font-weight:bold;
+color:#ffddb5;
+
+text-shadow:
+0 0 10px rgba(255,220,180,.6),
+0 0 20px rgba(255,180,90,.4);
+}
+
+.time-box small{
+margin-top:5px;
+font-size:.9rem;
+letter-spacing:1px;
+}
+.hero-photo{
+margin:30px auto;
+width:320px;
+height:420px;
+position:relative;
+}
+
+.hero-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+
+border-radius:30px;
+
+border:4px solid rgba(255,220,180,.5);
+
+box-shadow:
+0 0 20px rgba(255,180,90,.4),
+0 0 60px rgba(255,180,90,.25),
+0 20px 40px rgba(0,0,0,.5);
+
+transition:.5s;
+}
+
+.hero-photo img:hover{
+transform:scale(1.03);
+}
+
+.hero-photo::before{
+content:'';
+position:absolute;
+inset:-10px;
+
+border-radius:35px;
+
+background:linear-gradient(
+45deg,
+rgba(255,220,180,.4),
+rgba(255,180,90,.15),
+rgba(255,220,180,.4)
+);
+
+filter:blur(20px);
+
+z-index:-1;
+}
+
+.hero-photo::after{
+content:'🎂 Birthday Boy 🎂';
+
+position:absolute;
+bottom:-18px;
+left:50%;
+
+transform:translateX(-50%);
+
+background:rgba(0,0,0,.7);
+
+padding:10px 25px;
+
+border-radius:50px;
+
+font-size:.9rem;
+letter-spacing:2px;
+
+border:1px solid rgba(255,220,180,.3);
+
+backdrop-filter:blur(10px);
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop controls>
+<source src="hbd.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hero">
+
+<div class="glass">
+
+<h1>🎂 Happy Birthday</h1>
+
+<h2>
+✨ Rezlly Beni Alfazri ✨
+</h2>
+<div class="hero-photo">
+    <img src="foto.jpg" alt="Rezlly">
+</div>
+<div class="countdown-box">
+
+<h3>🎁 Menuju Hari Spesial 🎁</h3>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<small>Hari</small>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<small>Jam</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<small>Menit</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<small>Detik</small>
+</div>
+
+</div>
+
+</div>
+<p>
+31 Mei 2026 ❤️
+<br><br>
+Hari ini adalah hari spesial karena seseorang yang sangat berarti lahir ke dunia.
+Semoga setiap langkahmu dipenuhi kebahagiaan, kesehatan, kesuksesan,
+dan semua hal baik yang pantas kamu dapatkan.
+</p>
+
+</div>
+
+</div>
+
+<section class="gallery">
+
+<h2 class="title">Our Memories 📸</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="foto1.jpg">
+</div>
+
+<div class="card">
+<img src="foto2.jpg">
+</div>
+
+<div class="card">
+<img src="foto3.jpg">
+</div>
+
+<div class="card">
+<img src="foto4.jpg">
+</div>
+
+<div class="card">
+<img src="foto5.jpg">
+</div>
+
+<div class="card">
+<img src="foto6.jpg">
+</div>
+
+</div>
+
+</section>
+
+<section class="letter">
+
+<h2 class="title">For You ❤️</h2>
+
+<div class="letter-box">
+
+<p>
+
+Selamat ulang tahun sayangku, Rezlly Beni Alfazri.
+
+Terima kasih telah menjadi bagian dari perjalanan hidupku.
+Terima kasih untuk semua tawa, perhatian, dukungan, dan cinta yang selalu kamu berikan.
+
+Semoga di usia yang baru ini semua impianmu satu per satu terwujud.
+Semoga kesehatan, rezeki, dan kebahagiaan selalu menyertaimu.
+
+Aku berharap kita bisa terus membuat kenangan indah bersama,
+melewati setiap cerita yang akan datang, dan tetap saling menguatkan dalam keadaan apa pun.
+
+Hari ini adalah harimu,
+jadi tersenyumlah, berbahagialah,
+dan nikmati setiap momen spesial yang ada.
+
+Love you❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<div>
+
+<h1>🎉 31 Mei 2026 🎉</h1>
+
+<p>
+Happy Birthday My Love ❤️
+<br>
+Forever & Always
+</p>
+
+</div>
+
+</section>
+<div id="stars"></div>
+<script>
+
+/* BALLOON */
+
+for(let i=0;i<25;i++){
+
+let b=document.createElement('div');
+b.className='balloon';
+
+b.style.left=Math.random()*100+'vw';
+b.style.animationDuration=(18+Math.random()*15)+'s';
+b.style.animationDelay=(-Math.random()*20)+'s';
+b.style.transform=`scale(${0.7+Math.random()*0.6})`;
+
+b.innerHTML=`
+<svg width="40" height="180">
+<path
+d="
+M20 0
+C 40 20, 0 40, 20 60
+C 40 80, 0 100, 20 120
+C 40 140, 0 160, 20 180"
+stroke="rgba(255,255,255,.8)"
+stroke-width="2"
+fill="none"
+/>
+</svg>
+`;
+
+document.body.appendChild(b);
+
+}
+
+/* HEART */
+
+setInterval(()=>{
+
+let heart=document.createElement('div');
+
+heart.className='heart';
+heart.innerHTML='❤️';
+
+heart.style.left=Math.random()*100+'vw';
+heart.style.fontSize=(15+Math.random()*35)+'px';
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},400);
+
+/* STARS */
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement('div');
+
+star.style.position='fixed';
+star.style.width='3px';
+star.style.height='3px';
+star.style.borderRadius='50%';
+star.style.background='white';
+star.style.boxShadow='0 0 15px white';
+
+star.style.left=Math.random()*100+'vw';
+star.style.top=Math.random()*100+'vh';
+
+star.animate(
+[
+{opacity:.2},
+{opacity:1},
+{opacity:.2}
+],
+{
+duration:1000+Math.random()*5000,
+iterations:Infinity
+}
+);
+
+document.body.appendChild(star);
+
+}
+const birthdayDate = new Date("May 31, 2026 00:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+const distance = birthdayDate - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+const hours = Math.floor(
+(distance % (1000 * 60 * 60 * 24))
+/
+(1000 * 60 * 60)
+);
+
+const minutes = Math.floor(
+(distance % (1000 * 60 * 60))
+/
+(1000 * 60)
+);
+
+const seconds = Math.floor(
+(distance % (1000 * 60))
+/
+1000
+);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+if(distance < 0){
+
+document.querySelector(".countdown-box").innerHTML = `
+<h2 style="
+color:#ffddb5;
+font-size:3rem;
+text-shadow:0 0 20px gold;
+">
+🎉 HAPPY BIRTHDAY REZLLY 🎉
+</h2>
+
+<p style="
+margin-top:20px;
+font-size:1.2rem;
+">
+Semoga semua impianmu menjadi kenyataan ❤️
+</p>
+`;
+
+}
+
+},1000);
+</script>
+
+
+</body>
+</html>
