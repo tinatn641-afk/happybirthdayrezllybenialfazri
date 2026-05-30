@@ -144,7 +144,7 @@ overflow:hidden;
 max-width:900px;
 margin:auto;
 
-background:rgba(255,255,255,.08);
+background:rgba(0,0,0,.45);
 backdrop-filter:blur(20px);
 -webkit-backdrop-filter:blur(20px);
 
@@ -439,13 +439,21 @@ position:relative;
 }
 
 .hero-photo img{
+width:100%;
+height:100%;
 object-fit:contain;
 background:#000;
-}
 
 border-radius:30px;
-
 border:4px solid rgba(255,220,180,.5);
+
+box-shadow:
+0 0 20px rgba(255,180,90,.4),
+0 0 60px rgba(255,180,90,.25),
+0 20px 40px rgba(0,0,0,.5);
+
+transition:.5s;
+}
 
 box-shadow:
 0 0 20px rgba(255,180,90,.4),
@@ -614,6 +622,38 @@ height:80px;
 }
 .hero-photo::after{
 content:'❤️ My Favorite Person ❤️';
+}
+@media (max-width:768px){
+
+body{
+color:#ffffff;
+}
+
+.glass,
+.letter-box,
+.countdown-box,
+.final div{
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(20px);
+}
+
+.hero p,
+.letter-box p,
+.final p{
+color:#ffffff;
+text-shadow:
+0 2px 5px rgba(0,0,0,.8);
+}
+
+.hero h1,
+.hero h2,
+.title,
+.final h1{
+text-shadow:
+0 0 15px rgba(0,0,0,.9),
+0 0 25px rgba(0,0,0,.8);
+}
+
 }
 </style>
 </head>
