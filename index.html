@@ -292,10 +292,6 @@ opacity:0;
 }
 }
 
-audio{
-display:none;
-}
-
 .hero,
 .gallery,
 .letter,
@@ -655,13 +651,41 @@ text-shadow:
 }
 
 }
+#startScreen{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.95);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+#startScreen button{
+    padding:18px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:1.2rem;
+    cursor:pointer;
+    background:#ffddb5;
+    color:#000;
+    font-weight:bold;
+}
 </style>
+
 </head>
 
 <body>
+<body>
 
-<audio autoplay loop controls>
-<source src="hbd.mp3" type="audio/mpeg">
+<div id="startScreen">
+    <button onclick="startMusic()">
+        ❤️ Buka Surprise ❤️
+    </button>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="hbd.mp3" type="audio/mpeg">
 </audio>
 
 <div class="hero">
@@ -938,6 +962,22 @@ Semoga semua impianmu menjadi kenyataan ❤️
 },1000);
 </script>
 
+<script>
+const music = document.getElementById("bgMusic");
 
+document.addEventListener("click", () => {
+    music.play();
+}, { once:true });
+
+document.addEventListener("touchstart", () => {
+    music.play();
+}, { once:true });
+</script>
+<script>
+function startMusic(){
+    document.getElementById("bgMusic").play();
+    document.getElementById("startScreen").style.display="none";
+}
+</script>
 </body>
 </html>
